@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="OrcasThemes">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>球员列表</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!--[if IE 7]>
+
+<![endif]-->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!--[if lt IE 8]>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+    <link href="css/lity.css" rel="stylesheet">
+    <style>
+        button {
+            width: 69px;
+            height: 36px;
+            margin-left: 1px;
+            border: none;
+            color: #000;
+            /* padding: 15px 32px; */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: #4280e6;
+        }
+        
+        button:hover {
+            background-color: #4280e6;
+            color: #fff;
+        }
+        
+        #daohang {
+            width: 60px;
+            font-size: 22px;
+            height: auto;
+            position: fixed;
+            /* position: absolute; */
+            z-index: 999;
+            display: none;
+            float: right;
+            margin-left: 315px;
+            padding-left: 10px;
+            text-align: center;
+        }
+        
+        #daohang p {
+            background: rgba(100, 149, 237, 0.5);
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 1024px) {
+            #daohang {
+                display: block;
+                width: 60px;
+                font-size: 22px;
+                height: auto;
+                position: fixed;
+                /* position: absolute; */
+                z-index: 999;
+                /* display: none; */
+                right: 0;
+                margin-left: 315px;
+                padding-left: 10px;
+                text-align: center;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            #zxsp {
+                margin-left: 60px;
+            }
+            #qyinfo {
+                width: 10%;
+                margin-left: 30px;
+            }
+            #liebiao {
+                width: 100%;
+            }
+            #liebiao2 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HOME 1 -->
+    <div id="home1" class="container-fluid standard-bg">
+        <!-- HEADER -->
+        <div class="row header-top">
+            <div class="col-lg-3 col-md-6 col-sm-5 col-xs-8">
+                <!-- <a class="main-logo" href="#"><img src="img/main-logo.png" class="main-logo img-responsive" alt="Muvee Reviews" title="Muvee Reviews"></a> -->
+                <a class="main-logo" href="#" style="font: 2em sans-serif;">中国羽毛球队</a>
+            </div>
+            <!-- <div class="col-lg-6 hidden-md text-center hidden-sm hidden-xs">
+                <img src="img/banners/banner-sm.jpg" class="img-responsive" alt="Muvee Reviews Video Magazine HTML5 Bootstrap">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-7 hidden-xs">
+                <div class="right-box">
+                    <button type="button" class="access-btn" data-toggle="modal" data-target="#enquirypopup">get free access</button>
+                </div>
+            </div> -->
+        </div>
+        <!-- MENU -->
+        <div class="row home-mega-menu ">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+			 <span class="sr-only">Toggle navigation</span>
+			 <span class="icon-bar"></span>
+			 <span class="icon-bar"></span>
+			 <span class="icon-bar"></span>
+			 </button>
+                    </div>
+                    <div class="collapse navbar-collapse js-navbar-collapse megabg dropshd ">
+                        <ul class="nav navbar-nav" id="daohangli">
+
+                        </ul>
+                        <!-- <ul class="social">
+                            <li class="social-facebook">
+                                <a href="#" class="fa fa-facebook social-icons"></a>
+                            </li>
+                            <li class="social-google-plus">
+                                <a href="#" class="fa fa-google-plus social-icons"></a>
+                            </li>
+                            <li class="social-twitter">
+                                <a href="#" class="fa fa-twitter social-icons"></a>
+                            </li>
+                            <li class="social-youtube">
+                                <a href="#" class="fa fa-youtube social-icons"></a>
+                            </li>
+                            <li class="social-rss">
+                                <a href="#" class="fa fa-rss social-icons"></a>
+                            </li>
+                        </ul> -->
+                        <div class="search-block">
+                            <!-- <form>
+                                <input type="search" placeholder="Search" placeholder="全英 女单" />
+                                <button><a>搜索</a></button>
+                            </form> -->
+                        </div>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </nav>
+            </div>
+        </div>
+        <!-- CORE -->
+        <div class="row">
+            <!-- SIDEBAR -->
+            <div id="daohang">
+                <p><a href="#nvdan">女单</a></p>
+                <p><a href="#nandan">男单</a></p>
+                <p><a href="#nvshuang">女双</a></p>
+                <p><a href="#nanshuang">男双</a></p>
+                <p><a href="#hunshuang">混双</a></p>
+            </div>
+            <!-- HOME MAIN POSTS -->
+            <div class="col-lg-10 col-md-8" id="liebiao">
+                <section id="home-main">
+                    <h2 class="icon" id="nvdan"><i class="fa fa-star" aria-hidden="true"></i>女单</h2>
+                    <div class="row" id="zxsp">
+                        <!-- ARTICLES -->
+                        <div class="col-lg-9 col-md-12 col-sm-12" id="liebiao2">
+                            <div class="row auto-clear" id="nvdan_list">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="icon" id="nandan"><i class="fa fa-star" aria-hidden="true"></i>男单</h2>
+                    <div class="row" id="zxsp">
+                        <!-- ARTICLES -->
+                        <div class="col-lg-9 col-md-12 col-sm-12" id="liebiao2">
+                            <div class="row auto-clear" id="nandan_list">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="icon" id="nvshuang"><i class="fa fa-star" aria-hidden="true"></i>女双</h2>
+                    <div class="row" id="zxsp">
+                        <!-- ARTICLES -->
+                        <div class="col-lg-9 col-md-12 col-sm-12" id="liebiao2">
+                            <div class="row auto-clear" id="nvshuang_list">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="icon" id="nanshuang"><i class="fa fa-star" aria-hidden="true"></i>男双</h2>
+                    <div class="row" id="zxsp">
+                        <!-- ARTICLES -->
+                        <div class="col-lg-9 col-md-12 col-sm-12" id="liebiao2">
+                            <div class="row auto-clear" id="nanshuang_list">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="icon" id="hunshuang"><i class="fa fa-star" aria-hidden="true"></i>混双</h2>
+                    <div class="row" id="zxsp">
+                        <!-- ARTICLES -->
+                        <div class="col-lg-9 col-md-12 col-sm-12" id="liebiao2">
+                            <div class="row auto-clear" id="hunshuang_list">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="clearfix spacer"></div>
+        </div>
+
+    </div>
+    </section>
+    </div>
+    </div>
+    </div>
+    <!-- TABS -->
+
+    <!-- MAIN -->
+
+    <!-- JAVA SCRIPT -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lity.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var dh = '';
+            var player_nvdan = '';
+            var player_nandan = '';
+            var player_nvshuang = '';
+            var player_nanshuang = '';
+            var player_hunshuang = '';
+            u1 = window.location.search.split('?')[1];
+            if (u1 != null && u1.length != 0) {
+                u2 = u1.split('=')[0]
+                username = u1.split('=')[1]
+                if (u2 != null && u2.length != 0 && u2 == 'username') {
+                    dh += '<li><a href="index.html?username=' + username + '">首页</a></li><li><a href="player.html?username=' + username + '">球员</a></li><li><a href="match.html?username=' + username + '">赛事</a></li><li><a href="playercn.html?username=' + username + '">中国球员</a></li>'
+                } else {
+                    dh += '<li><a href="index.html">首页</a></li><li><a href="player.html">球员</a></li><li><a href="match.html">赛事</a></li>'
+                }
+            } else {
+                dh += '<li><a href="index.html">首页</a></li><li><a href="player.html">球员</a></li><li><a href="match.html">赛事</a></li>'
+            }
+            $('#daohangli').html(dh);
+            $.ajax({
+                url: 'https://videos.hbang.com.cn/playercn_list/',
+                dataType: "JSON",
+                type: "GET",
+                async: "false",
+                data: {},
+                success: function(data) {
+                    console.log(data)
+                    var result_nvdan = data['nvdan'];
+                    var result_nandan = data['nandan'];
+                    var result_nvshuang = data['nvshuang'];
+                    var result_nanshuang = data['nanshuang'];
+                    var result_hunshuang = data['hunshuang'];
+                    if (u1 != null && u1.length != 0) {
+                        u2 = u1.split('=')[0]
+                        username = u1.split('=')[1]
+                        if (u2 != null && u2.length != 0 && u2 == 'username') {
+                            for (var i = 0; i < result_nvdan.length; i++) {
+                                var n = result_nvdan[i]
+                                player_nvdan += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_nandan.length; i++) {
+                                var n = result_nandan[i]
+                                player_nandan += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_nvshuang.length; i++) {
+                                var n = result_nvshuang[i]
+                                player_nvshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_nanshuang.length; i++) {
+                                var n = result_nanshuang[i]
+                                player_nanshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_hunshuang.length; i++) {
+                                var n = result_hunshuang[i]
+                                player_hunshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?username=' + username + '&player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                        } else {
+                            for (var i = 0; i < result_nvdan.length; i++) {
+                                var n = result_nvdan[i]
+                                player_nvdan += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_nandan.length; i++) {
+                                var n = result_nandan[i]
+                                player_nandan += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_nvshuang.length; i++) {
+                                var n = result_nvshuang[i]
+                                player_nvshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_nanshuang.length; i++) {
+                                var n = result_nanshuang[i]
+                                player_nanshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                            for (var i = 0; i < result_hunshuang.length; i++) {
+                                var n = result_hunshuang[i]
+                                player_hunshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                    '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                    '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                    '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                            }
+                        }
+                    } else {
+                        for (var i = 0; i < result_nvdan.length; i++) {
+                            var n = result_nvdan[i]
+                            player_nvdan += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                        }
+                        for (var i = 0; i < result_nandan.length; i++) {
+                            var n = result_nandan[i]
+                            player_nandan += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                        }
+                        for (var i = 0; i < result_nvshuang.length; i++) {
+                            var n = result_nvshuang[i]
+                            player_nvshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                        }
+                        for (var i = 0; i < result_nanshuang.length; i++) {
+                            var n = result_nanshuang[i]
+                            player_nanshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                        }
+                        for (var i = 0; i < result_hunshuang.length; i++) {
+                            var n = result_hunshuang[i]
+                            player_hunshuang += '<article class="reviews col-lg-3 col-md-4 col-sm-4" id="qyinfo"><div class="post post-medium">' +
+                                '<a class="thumbr post-thumb" href="playercn_info.html?player=' + n[1] + '">' +
+                                '<img src="' + n[3] + '" class="review img-responsive" alt="Client"></a>' +
+                                '<div class="infor"><h4><a class="title" href="playercn_info.html?player=' + n[1] + '">' + n[1] + '</a></h4></div></div></article>'
+                        }
+                    }
+
+
+                    $('#nvdan_list').html(player_nvdan);
+                    $('#nandan_list').html(player_nandan);
+                    $('#nvshuang_list').html(player_nvshuang);
+                    $('#nanshuang_list').html(player_nanshuang);
+                    $('#hunshuang_list').html(player_hunshuang);
+
+                }
+            });
+        })
+    </script>
+    <script>
+        $(".nav .dropdown").hover(function() {
+            $(this).find(".dropdown-toggle").dropdown("toggle");
+        });
+    </script>
+    <!-- MODAL -->
+    <div id="enquirypopup" class="modal fade in " role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content row">
+                <div class="modal-header custom-modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h2 class="icon"><i class="fa fa-television" aria-hidden="true"></i>free access</h2>
+                </div>
+                <div class="modal-body">
+                    <form name="info_form" class="form-inline" action="#" method="post">
+                        <div class="form-group col-sm-12">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <button class="subscribe-btn pull-right" type="submit" title="Subscribe">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
